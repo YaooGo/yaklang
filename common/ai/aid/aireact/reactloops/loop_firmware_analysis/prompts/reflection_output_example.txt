@@ -1,0 +1,11 @@
+{
+  "@action": "record_dangerous_function",
+  "identifier": "record_system_sink",
+  "human_readable_thought": "记录高风险调用",
+  "function_name": "system",
+  "location": "sub_4012A0",
+  "risk": "command injection",
+  "input_source": "web parameter",
+  "evidence": "The command string is assembled from a request parameter before system() is called.",
+  "priority": "high"
+}

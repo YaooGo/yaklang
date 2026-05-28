@@ -1,0 +1,29 @@
+<|FIRMWARE_ANALYSIS_STATE_{{ .Nonce }}|>
+# Firmware Analysis State
+
+## Target
+- Type: {{ .FirmwareTargetType }}
+- Path: {{ .FirmwareTargetPath }}
+- Filename: {{ .FirmwareFilename }}
+- Size: {{ .FirmwareSize }}
+- Total Size: {{ .FirmwareTotalSize }}
+- File Count: {{ .FirmwareFileCount }}
+- Scope: {{ .FirmwareScope }}
+
+## Recorded Business Functions
+{{ .BusinessFunctions }}
+
+## Recorded Data Structures
+{{ .DataStructures }}
+
+## Recorded Dangerous Functions
+{{ .DangerousFunctions }}
+
+## Recorded Fuzz Plans
+{{ .FuzzPlans }}
+
+## Feedback From Previous Action
+{{ .FeedbackMessages }}
+
+Use this state to avoid repeating analysis. If a section is empty, collect evidence for it before finalizing unless the available tools/data make that impossible.
+<|FIRMWARE_ANALYSIS_STATE_END_{{ .Nonce }}|>
